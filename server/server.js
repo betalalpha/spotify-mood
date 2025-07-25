@@ -50,7 +50,8 @@ app.get('/callback', async (req, res) => {
     const access_token = response.data.access_token;
 
     // Afișăm tokenul direct (temporar)
-    res.send(`Tokenul tău este: ${access_token}`);
+    res.redirect(`${process.env.FRONTEND_URI}/dashboard?access_token=${access_token}`);
+
   } catch (error) {
     console.error('Eroare la schimbarea codului în token:', error.response?.data || error.message);
     res.send('A apărut o eroare la autentificare.');

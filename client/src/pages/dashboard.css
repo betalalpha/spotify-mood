@@ -1,0 +1,32 @@
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1DB954, #191414);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  width: 320px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 3px solid #1DB954;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
