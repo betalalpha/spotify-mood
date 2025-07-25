@@ -15,7 +15,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  const scope = 'user-read-private user-read-email user-top-read';
+  const scope = [
+    'user-read-private',
+    'user-read-email',
+    'user-top-read',
+    'user-read-recently-played'
+  ].join(' ');
+
   const queryParams = querystring.stringify({
     response_type: 'code',
     client_id: process.env.SPOTIFY_CLIENT_ID,

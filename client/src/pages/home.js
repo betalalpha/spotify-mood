@@ -1,15 +1,27 @@
-// src/pages/Home.js
-import React from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('access_token');
+
+    if (token) {
+      localStorage.setItem('access_token', token);
+      navigate('/dashboard');
+    }
+  }, [navigate]);
+
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h2>Welcome to Spotify App</h2>
+    <div className="home">
+      <h1>Bine ai venit!</h1>
       <a href="http://localhost:3001/login">
         <button>Conectează-te cu Spotify</button>
       </a>
     </div>
   );
-}
+};
 
 export default Home;

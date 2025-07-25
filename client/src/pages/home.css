@@ -1,0 +1,22 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  font-family: sans-serif;
+}
+
+.home button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.home button:hover {
+  background-color: #14833b;
+}
